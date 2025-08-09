@@ -3,7 +3,7 @@
 /* Programmet mottar fra et HTML-skjema et svar på spørsmålet "Hva er 3 ganger 3 ?"
 /* Programmet sjekker om svaret er riktig og skriver ut en melding avhengig av om svaret er riktig eller feil
 */
-$tall=$_POST ["svar"];
+$svar=$_POST ["svar"];
 if ($svar == 9) /* avgitt svar er riktig */
 {
 print("Riktig. 3 ganger 3 er 9 <br/>");
