@@ -4,12 +4,9 @@
 /* Programmet sjekker om svaret er riktig og skriver ut en melding avhengig av om svaret er riktig eller feil
 */
 $svar=$_POST ["svar"];
-if ($svar == 9) /* avgitt svar er riktig */
-{
-print("Riktig. 3 ganger 3 er 9 <br/>");
-}
-else /* avgitt svar er feil */
-{
-print("Feil. 3 ganger 3 er ikke $svar. 3 ganger 3 er 9 <br/>");
-}
+if ($svar == 9){
+        print("Riktig. 3 ganger 3 er 9 <br/>");
+} else {
+    print("Feil. 3 ganger 3 er ikke $svar. 3 ganger 3 er 9 <br/>");
+  }
 ?>
