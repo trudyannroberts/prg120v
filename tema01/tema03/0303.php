@@ -1,0 +1,16 @@
+<?php
+    for($tall1=1;$tall1<=10;$tall1++)
+  {
+    print("$tall1");
+  }
+  print("<br>");
+    for($tall2=11;$tall2<=20;$tall2++)
+  {
+        print("$tall2");     
+   }
+    print("<br>");
+    for($tall3=21;$tall3<=30;$tall3++)
+    {
+        print("$tall3");
+    }
+?>
