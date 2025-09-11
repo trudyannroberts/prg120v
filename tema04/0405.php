@@ -6,35 +6,26 @@
 function validerKlassekode($klassekode)
 {
     $lovligKlassekode=true;
-    if (!$klassekode) /* klassekode er ikke fylt ut */
-    {
-    $lovligKlassekode=false;
-    }
-    else if (strlen($klassekode)!=3) /* klassekode best�r ikke av 3 tegn */
-    {
-    $lovligKlassekode=false;
-    }
-    else
-    {
-    $tegn1=$klassekode[0]; /* f�rste tegn i klassekoden */
-    $tegn2=$klassekode[1]; /* andre tegn i klassekoden */
-    $tegn3=$klassekode[2]; /* tredje tegn i klassekoden */
-    if (!ctype_alpha($tegn1)) /* tegn1 er ikke bokstav */
-    {
-    $lovligKlassekode=false;
-    }
-    if (!ctype_alpha($tegn2)) /* tegn2 er ikke bokstav */
-    {
-    $lovligKlassekode=false;
-    }
-    if (!ctype_digit($tegn3)) /* tegn3 er ikke et siffer */
-    {
-    $lovligKlassekode=false;
-    }
-    6
-    }
+    if (!$klassekode) {
+        $lovligKlassekode=false;
+    } else if (strlen($klassekode)!=3) {
+        $lovligKlassekode=false;
+      } else{
+            $tegn1=$klassekode[0]; /* f�rste tegn i klassekoden */
+            $tegn2=$klassekode[1]; /* andre tegn i klassekoden */
+            $tegn3=$klassekode[2]; /* tredje tegn i klassekoden */
+            if (!ctype_alpha($tegn1)) {
+                $lovligKlassekode=false;
+            }
+            if (!ctype_alpha($tegn2)) {
+                $lovligKlassekode=false;
+            }
+            if (!ctype_digit($tegn3)) {
+                 $lovligKlassekode=false;
+            }
+        }
     return $lovligKlassekode;
-} /* Slutt p� funksjonen validerKlassekode($klassekode) */
+} 
 
 $klassekode=$_POST ["klassekode"];
 $lovligKlassekode=validerKlassekode($klassekode); /* valideringsfunksjon utf�rt */
