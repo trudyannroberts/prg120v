@@ -12,6 +12,7 @@ Studiumkode <input type="text" id="studiumkode" name="studiumkode" required /> <
 <input type="submit" value="Registrer emne" id="registrerEmneKnapp" name="registrerEmneKnapp" />
 <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
+
 <?php
 if (isset($_POST ["registrerEmneKnapp"]))
 {
