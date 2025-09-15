@@ -25,7 +25,7 @@ print ("Alle felt m&aring; fylles ut");
 }
 else
 {
-include("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
+include("tema05/db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
 $sqlSetning="SELECT * FROM emne WHERE emnekode='$emnekode';";
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
 $antallRader=mysqli_num_rows($sqlResultat);
@@ -33,7 +33,6 @@ if ($antallRader!=0) /* faget er registrert fra før */
 {
 print ("Emnet er registrert fra f&oslashr");
 }
-else
 {
 $sqlSetning="INSERT INTO emne (emnekode,emnenavn,studiumkode)
 VALUES('$emnekode','$emnenavn','$studiumkode');";
