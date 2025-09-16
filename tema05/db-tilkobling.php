@@ -2,7 +2,7 @@
 /*
 /* Programmet foretar tilkobling til database-server og valg av database
 */
-$host = getenv("b-studentsql-1.usn.no");
+$host = getenv("mariadb");
 $port = 3306;  
 $username = getenv('888846');
 $password = getenv('71f2888846');
