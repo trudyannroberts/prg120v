@@ -8,11 +8,13 @@
 <form method="post" action="" id="registrerEmneSkjema" name="registrerEmneSkjema">
 Emnekode <input type="text" id="emnekode" name="emnekode" required /> <br/>
 Emnenavn <input type="text" id="emnenavn" name="emnenavn" required /> <br/>
-Studiumkode <input type="text" id="studiumkode" name="studiumkode" required /> <br/>
+Studiumkode <select name="studiumkode" id="studiumkode">
+<?php print("<option value=''>velg studium </option>");
+include("dynamiske-funksjoner.php"); listeboksStudiumkode(); ?>
+</select> <br/>
 <input type="submit" value="Registrer emne" id="registrerEmneKnapp" name="registrerEmneKnapp" />
 <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
-
 <?php
 if (isset($_POST ["registrerEmneKnapp"]))
 {
@@ -25,7 +27,7 @@ print ("Alle felt m&aring; fylles ut");
 }
 else
 {
-include("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
+include("../db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
 $sqlSetning="SELECT * FROM emne WHERE emnekode='$emnekode';";
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
 $antallRader=mysqli_num_rows($sqlResultat);
@@ -33,6 +35,7 @@ if ($antallRader!=0) /* faget er registrert fra før */
 {
 print ("Emnet er registrert fra f&oslashr");
 }
+else
 {
 $sqlSetning="INSERT INTO emne (emnekode,emnenavn,studiumkode)
 VALUES('$emnekode','$emnenavn','$studiumkode');";
