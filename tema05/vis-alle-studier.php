@@ -2,6 +2,9 @@
 /*
 /* Programmet skriver ut alle registrerte studier
 */
+?>
+<link rel="stylesheet" href="styles.css" />
+<?php
 include("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
 $sqlSetning="SELECT * FROM studium ORDER BY studiumkode;";
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
@@ -18,3 +21,4 @@ $studiumnavn=$rad["studiumnavn"];
 print ("<tr> <td> $studiumkode </td> <td> $studiumnavn </td> </tr>");
 }
 print ("</table>");
+?>
