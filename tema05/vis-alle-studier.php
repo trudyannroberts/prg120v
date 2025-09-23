@@ -3,7 +3,16 @@
 /* Programmet skriver ut alle registrerte studier
 */
 ?>
-<link rel="stylesheet" href="styles.css" />
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Registrerte studier</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
 <?php
 include("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
 $sqlSetning="SELECT * FROM studium ORDER BY studiumkode;";
