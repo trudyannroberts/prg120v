@@ -5,7 +5,7 @@
 /* listeboksEmnekode ()
 */
 function listeboksStudiumkode (){
-    include("../db-tilkobling.php"); /* tilkobling til database-server og valg av database utført */
+    include("db-tilkobling.php"); /* tilkobling til database-server og valg av database utført */
     $sqlSetning="SELECT * FROM studium ORDER BY studiumkode;";
     $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
     $antallRader=mysqli_num_rows($sqlResultat); /* antall rader i resultatet beregnet */
@@ -19,7 +19,7 @@ function listeboksStudiumkode (){
 }
 
 function listeboksEmnekode (){
-    include("../db-tilkobling.php"); /* tilkobling til database-server og valg av database utført */
+    include("db-tilkobling.php"); /* tilkobling til database-server og valg av database utført */
     $sqlSetning="SELECT * FROM emne ORDER BY emnekode;";
     $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
     $antallRader=mysqli_num_rows($sqlResultat); /* antall rader i resultatet beregnet */
