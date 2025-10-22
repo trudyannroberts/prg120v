@@ -14,7 +14,7 @@
 <body>
 
 <?php
-include("../db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
+include("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
 $sqlSetning="SELECT * FROM studium ORDER BY studiumkode;";
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
 /* SQL-setning sendt til database-serveren */

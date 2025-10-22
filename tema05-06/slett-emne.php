@@ -17,7 +17,7 @@ include("dynamiske-funksjoner.php"); listeboksEmnekode(); ?>
 
 <?php
 if (isset($_POST ["slettEmneKnapp"])){
-    include("../db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
+    include("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
     $emnekode=$_POST ["emnekode"];
     $sqlSetning="DELETE FROM emne WHERE emnekode='$emnekode';";
     mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");

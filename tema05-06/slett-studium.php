@@ -17,7 +17,7 @@
 
 <?php
 if (isset($_POST ["slettStudiumKnapp"])){
-    ("../db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
+    ("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
     $studiumkode=$_POST ["studiumkode"];
     $sqlSetning="DELETE FROM studium WHERE studiumkode='$studiumkode';";
     mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");
